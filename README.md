@@ -69,26 +69,6 @@ Managing medical records across different hospitals is difficult. Patients often
 * 🏥 Multi-Hospital Record Sharing
 * 🌐 Multi-Language Support
 
-## 👥 Team
-
-**Team Name:** Tech Titans
-
-**Team Leader**
-
-* Om Borkhade
-
-**Team Members**
-
-* Tushar Chavan
-* Anurag Khobragade
-* Aryan Sandalwar
-* Khushi Bhagat
-
-## 🎯 Hackathon
-
-**Event:** TechBhasha HackFest 2.0
-**Domain:** Health & Fitness
-
 ## 🔗 Links
 
 **🌐 Live Demo:**
@@ -98,5 +78,3 @@ https://wecare-hospitals-e6a6c.web.app/assets/index-CJ1sj3ZJ.js
 https://github.com/Anuragkhobragade/Tech-Titans
 
 ---
-
-⭐ **Built with ❤️ by Team Titans for TechBhasha HackFest 2.0**
