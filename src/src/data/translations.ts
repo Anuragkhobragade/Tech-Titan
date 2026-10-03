@@ -206,7 +206,28 @@ export const translations: Record<Language, Record<string, string>> = {
     'footer.sun': 'Sunday',
     'footer.closed': 'Closed (On-Call Only)',
     'footer.address': 'Ratanlal plots Mahadev Mandir Road, Yavatmal, Maharashtra 445301',
-    'footer.rights': 'All rights reserved.'
+    'footer.rights': 'All rights reserved.',
+
+    // Health Guidance
+    'guidance.dashboardTitle': 'Health Guidance',
+    'guidance.dashboardDesc': 'Get instant guidance on whether you need home care, a clinic, or a hospital.',
+    'guidance.startBtn': 'Start Health Guidance',
+    'guidance.disclaimer': 'This tool provides general health guidance only and is not a diagnosis. Always consult a qualified health professional for medical advice.',
+    'guidance.safetyTitle': 'Step 1: Emergency Danger Signs Check',
+    'guidance.safetyDesc': 'Are you or the patient experiencing any of the following emergency red flag symptoms right now?',
+    'guidance.basicsTitle': 'Step 2: Symptoms & Basic Details',
+    'guidance.adaptiveTitle': 'Step 3: Targeted Follow-up Questions',
+    'guidance.resultTitle': 'Guidance Recommendation',
+    'guidance.urgentHospital': 'Urgent Hospital Visit Required',
+    'guidance.nearestClinic': 'Visit Nearest Clinic (Within 24 Hours)',
+    'guidance.homeCare': 'Home Care & Self-Monitoring',
+    'guidance.reasonsHeader': 'Key Reasons for Recommendation:',
+    'guidance.nextStepsHeader': 'Recommended Next Steps:',
+    'guidance.nearestClinicInfo': 'Nearest Primary Health Center / Clinic',
+    'guidance.callEmergency': 'Call Emergency Hotline (108)',
+    'guidance.startOver': 'Start Over / Check New Symptom',
+    'guidance.back': 'Back',
+    'guidance.next': 'Continue'
   },
   hi: {
     // Language Names
@@ -413,7 +434,28 @@ export const translations: Record<Language, Record<string, string>> = {
     'footer.sun': 'रविवार',
     'footer.closed': 'बंद (केवल ऑन-कॉल आपातकालीन)',
     'footer.address': 'रतनलाल प्लॉट्स, महादेव मंदिर रोड, यवतमाल, महाराष्ट्र 445301',
-    'footer.rights': 'सर्वाधिकार सुरक्षित।'
+    'footer.rights': 'सर्वाधिकार सुरक्षित।',
+
+    // Health Guidance
+    'guidance.dashboardTitle': 'स्वास्थ्य मार्गदर्शन',
+    'guidance.dashboardDesc': 'तुरंत मार्गदर्शन प्राप्त करें कि क्या आपको घरेलू देखभाल, नजदीकी क्लिनिक या अस्पताल जाने की आवश्यकता है।',
+    'guidance.startBtn': 'स्वास्थ्य मार्गदर्शन शुरू करें',
+    'guidance.disclaimer': 'यह टूल केवल सामान्य स्वास्थ्य मार्गदर्शन प्रदान करता है और यह कोई निदान नहीं है। चिकित्सीय सलाह के लिए हमेशा योग्य स्वास्थ्य पेशेवर से परामर्श लें।',
+    'guidance.safetyTitle': 'चरण 1: आपातकालीन गंभीर लक्षणों की जांच',
+    'guidance.safetyDesc': 'क्या आप या मरीज अभी इनमें से किसी भी आपातकालीन खतरे के संकेत का अनुभव कर रहे हैं?',
+    'guidance.basicsTitle': 'चरण 2: मुख्य लक्षण और प्राथमिक विवरण',
+    'guidance.adaptiveTitle': 'चरण 3: लक्षित अनुवर्ती प्रश्न',
+    'guidance.resultTitle': 'मार्गदर्शन सिफारिश',
+    'guidance.urgentHospital': 'तत्काल अस्पताल जाने की आवश्यकता है',
+    'guidance.nearestClinic': 'नजदीकी क्लिनिक जाएं (24 घंटे के भीतर)',
+    'guidance.homeCare': 'घरेलू देखभाल और स्व-निगरानी',
+    'guidance.reasonsHeader': 'सिफारिश के मुख्य कारण:',
+    'guidance.nextStepsHeader': 'अनुशंसित अगले कदम:',
+    'guidance.nearestClinicInfo': 'नजदीकी प्राथमिक स्वास्थ्य केंद्र / क्लिनिक',
+    'guidance.callEmergency': 'इमरजेंसी हेल्पलाइन पर कॉल करें (108)',
+    'guidance.startOver': 'पुनः प्रारंभ करें / नया लक्षण जांचें',
+    'guidance.back': 'पीछे',
+    'guidance.next': 'आगे बढ़ें'
   },
   mr: {
     // Language Names
@@ -620,6 +662,27 @@ export const translations: Record<Language, Record<string, string>> = {
     'footer.sun': 'रविवार',
     'footer.closed': 'बंद (फक्त ऑन-कॉल इमर्जन्सी)',
     'footer.address': 'रतनलाल प्लॉट्स, महादेव मंदिर रोड, यवतमाळ, महाराष्ट्र ४४५३०१',
-    'footer.rights': 'सर्व हक्क राखीव.'
+    'footer.rights': 'सर्व हक्क राखीव.',
+
+    // Health Guidance
+    'guidance.dashboardTitle': 'आरोग्य मार्गदर्शन',
+    'guidance.dashboardDesc': 'तुम्हाला घरगुती काळजी, जवळचे क्लिनिक किंवा तातडीच्या रुग्णालयाची गरज आहे का याचे त्वरित मार्गदर्शन मिळवा.',
+    'guidance.startBtn': 'आरोग्य मार्गदर्शन सुरू करा',
+    'guidance.disclaimer': 'हे साधन केवळ सामान्य आरोग्य मार्गदर्शन प्रदान करते आणि हे निदान नाही. वैद्यकीय सल्ल्यासाठी नेहमी पात्र आरोग्य तज्ञांचा सल्ला घ्या.',
+    'guidance.safetyTitle': 'टप्पा १: तातडीच्या धोक्याच्या लक्षणांची तपासणी',
+    'guidance.safetyDesc': 'तुम्हाला किंवा रुग्णाला सध्या खालीलपैकी कोणतीही तातडीची गंभीर लक्षणे आहेत का?',
+    'guidance.basicsTitle': 'टप्पा २: मुख्य लक्षणे आणि प्राथमिक माहिती',
+    'guidance.adaptiveTitle': 'टप्पा ३: लक्ष्यित पुढील प्रश्न',
+    'guidance.resultTitle': 'मार्गदर्शन शिफारस',
+    'guidance.urgentHospital': 'तातडीने रुग्णालयात जाण्याची आवश्यकता आहे',
+    'guidance.nearestClinic': 'जवळच्या क्लिनिकला भेट द्या (२४ तासांच्या आत)',
+    'guidance.homeCare': 'घरगुती काळजी आणि स्वतः देखरेख',
+    'guidance.reasonsHeader': 'शिफारसीची मुख्य कारणे:',
+    'guidance.nextStepsHeader': 'शिफारस केलेले पुढील टप्पे:',
+    'guidance.nearestClinicInfo': 'जवळचे प्राथमिक आरोग्य केंद्र / क्लिनिक',
+    'guidance.callEmergency': 'इमरजन्सी हेल्पलाइनवर कॉल करा (१०८)',
+    'guidance.startOver': 'पुन्हा सुरू करा / नवीन लक्षण तपासा',
+    'guidance.back': 'मागे',
+    'guidance.next': 'पुढे जा'
   }
 };

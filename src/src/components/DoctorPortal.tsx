@@ -89,11 +89,11 @@ export default function DoctorPortal({ setCurrentPage, userProfile, onSignOut, o
         }
 
         setUploadingShareAttachment(true);
-        const fileList = Array.from(files);
+        const fileList = Array.from(files) as File[];
         let loadedCount = 0;
         const newItems: { name: string; url: string }[] = [];
 
-        fileList.forEach((file) => {
+        fileList.forEach((file: File) => {
             if (file.size > 3 * 1024 * 1024) {
                 alert(`File "${file.name}" is over 3MB limit.`);
                 loadedCount++;
@@ -304,7 +304,7 @@ export default function DoctorPortal({ setCurrentPage, userProfile, onSignOut, o
             const unsubscribe = onSnapshot(q, (snapshot) => {
                 const list: Appointment[] = [];
                 snapshot.forEach((docSnap) => {
-                    list.push(docSnap.data() as Appointment);
+                    list.push({ id: docSnap.id, ...docSnap.data() } as Appointment);
                 });
                 // Sort by date/time or created time descending
                 list.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
@@ -1502,7 +1502,7 @@ export default function DoctorPortal({ setCurrentPage, userProfile, onSignOut, o
                                 >
                                     {DOCTORS.map((docItem) => (
                                         <option key={docItem.id} value={docItem.id}>
-                                            👨‍⚕️ {docItem.name} — {docItem.specialty} ({docItem.title})
+                                            👨‍⚕️ {docItem.name} — {docItem.specialty} ({docItem.experienceYears} yrs exp)
                                         </option>
                                     ))}
                                 </select>

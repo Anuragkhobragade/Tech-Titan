@@ -20,6 +20,7 @@ import Emergency from './components/Emergency';
 import DriverPortal from './components/DriverPortal';
 import PhcPortal from './components/PhcPortal';
 import AIChatbot from './components/AIChatbot';
+import HealthGuidance from './components/HealthGuidance';
 import { handleFirestoreError, OperationType } from './lib/firestoreErrorHandler';
 
 export default function App() {
@@ -126,7 +127,7 @@ export default function App() {
             const unsubscribeLiveListener = onSnapshot(q, (snapshot) => {
                 const syncedList: Appointment[] = [];
                 snapshot.forEach((docSnap) => {
-                    syncedList.push(docSnap.data() as Appointment);
+                    syncedList.push({ id: docSnap.id, ...docSnap.data() } as Appointment);
                 });
 
                 // Order by creation date descending
@@ -135,7 +136,7 @@ export default function App() {
             }, (error) => {
                 console.warn('Background live-sync encountered an issue (e.g., offline or empty cloud indexes):', error);
                 try {
-                    const stored = localStorage.getItem('sanjeevani_appointments');
+                    const stored = localStorage.getItem('vitalis_appointments');
                     if (stored) {
                         const fallbackAppointments = JSON.parse(stored) as Appointment[];
                         // Avoid cross-user leaks: filter by current user's uid or matched email
@@ -297,6 +298,28 @@ export default function App() {
                                         </div>
                                     </div>
                                     <AuthForm onSuccess={() => setCurrentPage('my-appointments')} initialMode="signin" />
+                                </div>
+                            )
+                        )}
+
+                        {/* Protected Route: Rural Health Guidance */}
+                        {currentPage === 'health-guidance' && (
+                            user ? (
+                                <HealthGuidance
+                                    setCurrentPage={setCurrentPage}
+                                    user={user}
+                                    userProfile={userProfile}
+                                />
+                            ) : (
+                                <div className="bg-slate-50/50 min-h-screen py-16 px-4" id="health-guidance-unauthenticated-barrier">
+                                    <div className="max-w-md mx-auto mb-6 bg-slate-900 text-slate-100 rounded-2xl p-5 text-xs flex items-start space-x-3 shadow-md">
+                                        <MailWarning className="h-5 w-5 text-teal-400 shrink-0 mt-0.5" />
+                                        <div>
+                                            <p className="font-extrabold text-sm text-white">Access Health Guidance</p>
+                                            <p className="text-slate-300 mt-1 leading-relaxed">Sign in to your patient portal account to perform symptom assessment and get health guidance.</p>
+                                        </div>
+                                    </div>
+                                    <AuthForm onSuccess={() => setCurrentPage('health-guidance')} initialMode="signin" />
                                 </div>
                             )
                         )}

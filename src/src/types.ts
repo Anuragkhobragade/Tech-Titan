@@ -149,4 +149,4 @@ export interface Appointment {
     lastSharedWith?: string;
 }
 
-export type Page = 'home' | 'about' | 'departments' | 'doctors' | 'booking' | 'my-appointments' | 'auth' | 'admin' | 'doctor-portal' | 'driver-portal' | 'emergency' | 'phc-portal';
+export type Page = 'home' | 'about' | 'departments' | 'doctors' | 'booking' | 'my-appointments' | 'auth' | 'admin' | 'doctor-portal' | 'driver-portal' | 'emergency' | 'phc-portal' | 'health-guidance';

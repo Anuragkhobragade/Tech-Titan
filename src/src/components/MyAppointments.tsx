@@ -16,7 +16,9 @@ import {
     FileText,
     Edit,
     Video,
-    UserRound
+    UserRound,
+    Stethoscope,
+    ArrowRight
 } from 'lucide-react';
 
 interface MyAppointmentsProps {
@@ -145,6 +147,41 @@ export default function MyAppointments({
     return (
         <div className="bg-slate-50/50 min-h-screen py-12 lg:py-16" id="my-appointments-dashboard">
             <div className="max-w-4xl mx-auto px-4 sm:px-6">
+
+                {/* PATIENT PORTAL QUICK SERVICES & HEALTH GUIDANCE CARD */}
+                <div className="bg-white rounded-3xl border border-slate-150 p-5 sm:p-6 mb-8 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 relative overflow-hidden transition-all hover:border-teal-500 hover:shadow-md" id="patient-dashboard-health-guidance-card">
+                    {/* Decorative accent background pill */}
+                    <div className="absolute -top-12 -right-12 w-36 h-36 bg-teal-50 rounded-full blur-xl pointer-events-none" />
+
+                    <div className="flex items-start space-x-4 relative z-10">
+                        <div className="w-12 h-12 rounded-2xl bg-teal-650 text-white flex items-center justify-center shrink-0 shadow-md shadow-teal-700/20">
+                            <Stethoscope className="h-6 w-6" />
+                        </div>
+                        <div>
+                            <div className="inline-flex items-center space-x-1.5 text-teal-700 text-[10px] font-extrabold uppercase font-mono tracking-wider mb-0.5">
+                                <span>Patient Care • ग्रामीण स्वास्थ्य</span>
+                            </div>
+                            <h2 className="text-lg font-extrabold text-slate-900 font-sans">
+                                {t('guidance.dashboardTitle')}
+                            </h2>
+                            <p className="text-slate-500 text-xs sm:text-sm mt-0.5 max-w-xl leading-relaxed">
+                                {t('guidance.dashboardDesc')}
+                            </p>
+                        </div>
+                    </div>
+
+                    <button
+                        onClick={() => {
+                            setCurrentPage('health-guidance');
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className="w-full sm:w-auto shrink-0 bg-teal-650 hover:bg-teal-750 active:bg-teal-800 text-white font-bold py-2.5 px-5 rounded-xl text-xs sm:text-sm shadow-sm hover:shadow transition-all cursor-pointer inline-flex items-center justify-center space-x-2 relative z-10"
+                        id="patient-health-guidance-btn"
+                    >
+                        <span>{t('guidance.startBtn')}</span>
+                        <ArrowRight className="h-4 w-4" />
+                    </button>
+                </div>
 
                 {/* CONTROLS PROFILE BAR */}
                 {appointments.length > 0 && (

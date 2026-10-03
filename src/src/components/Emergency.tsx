@@ -99,6 +99,8 @@ export default function Emergency({ setCurrentPage }: EmergencyProps) {
         const unsubscribe = onSnapshot(colRef, async (snapshot) => {
             if (snapshot.empty) {
                 console.log("Seeding ambulances database...");
+                setAmbulances(AMBULANCE_DRIVERS);
+                setLoading(false);
                 try {
                     for (const driver of AMBULANCE_DRIVERS) {
                         await setDoc(doc(db, 'ambulances', driver.id), driver);
